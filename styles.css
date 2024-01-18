@@ -1,0 +1,387 @@
+/* Estilos generales */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between; /* Distribuye el espacio entre las secciones */
+    align-items: center; /* Centra verticalmente el contenido en el header */
+    background-color: #fff;
+    color: #e50b2d;
+    padding: 10px 20px; /* Ajusta el padding según tus necesidades */
+}
+
+.header-section {
+    display: flex;
+    gap: 20px; /* Espacio entre las secciones del header */
+}
+
+.logo-section img {
+    max-width: 120px; /* Ajusta este valor según tus necesidades */
+    height: auto;
+}
+
+.navbar-section {
+    display: flex;
+}
+
+.navbar-section a {
+    color: #e50b2d;
+    text-decoration: none;
+    padding: 5px 25px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    body {
+        overflow-x: auto;
+    }
+
+    .header-section nav{
+        display: none; /* Oculta las secciones del navbar en dispositivos móviles */
+    }
+    
+    .logo-section {
+        justify-content: center;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .logo-section img {
+        max-width: 100px; /* Ajusta el tamaño del logo según sea necesario */
+    }
+}
+
+footer {
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 150px; /* Puedes ajustar esta altura según tus necesidades */
+}
+
+footer img {
+    max-width: 100px; /* Ajusta el tamaño del logo según sea necesario */
+    margin-bottom: 10px;
+}
+
+/* Estilos para dispositivos de pantalla pequeña */
+@media (max-width: 768px) {
+    footer {
+        height: auto;
+        flex-direction: column;
+    }
+
+    footer img {
+        margin-bottom: 20px;
+    }
+}
+
+/* Estilos para cada sección */
+
+.section-one {
+    background: linear-gradient(to left, rgb(19, 19, 19), #484747);
+    padding: 3vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; 
+}
+
+.column {
+    flex: 1;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.column img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: -120px;
+}
+
+.section-one h1 {
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 3em;
+    text-align: left;
+}
+.section-one p {
+    color: #fff;
+    font-size: 1.2em;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .section-one {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .section-one h1,
+    .section-one p {
+        text-align: center; /* Centra el texto en pantallas pequeñas */
+    }
+
+    .column {
+        padding: 0.5rem; /* Ajusta el padding para pantallas más pequeñas */
+    }
+
+    .column img {
+        margin-bottom: 0; /* Elimina el margen negativo para pantallas más pequeñas */
+    }
+}
+
+.section-two {
+    padding: 5vw 0; /* Utilizando vw (viewport width) para un padding más proporcional */
+}
+
+.section-header {
+    text-align: justify;
+    margin-bottom: 5vw;
+}
+
+.section-header h1 {
+    text-align: center;
+    font-size: 2em;
+    color: #e50b2d;
+}
+
+.section-header p {
+    font-size: 1.5em;
+    color: #131559;
+    padding-left: 10vw;   /* Ajusta el padding izquierdo */
+    padding-right: 10vw;
+}
+
+.columns-container {
+    display: flex;
+    justify-content: center; /* Centra las columnas horizontalmente */
+    align-items: flex-start; /* Alinea las columnas en la parte superior */
+    flex-wrap: wrap;
+}
+
+.column2 {
+    flex: 1;
+    padding: 1vw; /* Ajusta el padding para pantallas más pequeñas */
+    text-align: center;
+}
+
+.column2 img {
+    max-width: 80%;
+    height: auto;
+    margin-top: -10%; /* Ajusta el margen superior si es necesario */
+    margin-left: 15%; /* Ajusta el margen superior si es necesario */
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+}
+
+.column2 p {
+    font-size: 1.5em;
+    color: #131559;
+    padding-left: 6vw;
+    padding-right: 6vw;
+    text-align: justify;
+}
+
+/* Media Query para pantallas más pequeñas (móvil) */
+@media (max-width: 768px) {
+    .section-header h1 {
+        font-size: 1.5em;
+    }
+
+    .section-header p {
+        font-size: 0.8em;
+    }
+    .column2 p {
+        font-size: 0.8em;
+    }
+
+    .columns-container {
+        flex-direction: column; /* Cambia la dirección del flexbox a vertical */
+    }
+
+    .column2 {
+        padding: 1vw; /* Ajusta el padding para pantallas más pequeñas */
+    }
+
+    .column2 img {
+        max-width: 80%;
+        height: auto;
+        margin-top: 5%; /* Ajusta el margen superior si es necesario */
+        margin-left: 5%; /* Ajusta el margen superior si es necesario */
+    }
+}
+
+.section-three {
+    display: flex;
+    background: linear-gradient(to left, #131559 0%, #393a86 100%);
+    padding: 20px;
+    position: relative;
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    padding-left: 7vw;
+}
+
+.section-three p, .section-four p {
+    text-align: justify;
+    font-size: 1.1em;
+    padding-left: 3vw;
+    padding-right: 3vw;
+}
+
+.section-three h2, .section-four h2 {
+    text-align: center; /* Centra el texto */
+    font-size: 2.5em; /* Ajusta el tamaño de fuente */
+}
+
+.left-side, .right-side {
+    flex-basis: 48%; /* Establece el ancho base de cada elemento */
+    padding: 20px; /* Ajusta el padding según tus necesidades */
+}
+
+.left-side {
+    background-color: #fff;
+    border-bottom-right-radius: 100px;
+    color: #131559; /* Cambia el color del texto si es necesario */
+}
+
+.right-side {
+    background-color: transparent;
+    color: #fff; /* Cambia el color del texto si es necesario */
+}
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .section-three {
+        flex-direction: column; /* Cambia la dirección del flexbox a vertical */
+        align-items: center; /* Centra los elementos horizontalmente */
+    }
+    .left-side {
+        border-bottom-right-radius: 100px;
+        width: -webkit-fill-available;
+    }
+
+    .left-side, .right-side {
+        flex-basis: 100%; /* Establece el ancho al 100% para que se apilen verticalmente */
+    }
+}
+
+.section-four {
+    display: flex;
+    background: linear-gradient(to right, #131559 0%, #393a86 100%);
+    padding: 20px;
+    position: relative;
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    padding-right: 7vw;
+}
+
+.left-side4, .right-side4 {
+    flex-basis: 48%; /* Establece el ancho base de cada elemento */
+    padding: 20px; /* Ajusta el padding según tus necesidades */
+}
+
+.left-side4 {
+    background-color: transparent;
+    color: #fff; /* Cambia el color del texto si es necesario */
+}
+
+.right-side4 {
+    background-color: #fff;
+    border-top-left-radius: 100px;
+    color: #131559; /* Cambia el color del texto si es necesario */
+}
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .section-four {
+        flex-direction: column; /* Cambia la dirección del flexbox a vertical */
+        align-items: center; /* Centra los elementos horizontalmente */
+    }
+    .right-side4 {
+        border-top-left-radius: 100px;
+        width: -webkit-fill-available;
+    }
+
+    .section-three, .section-four {
+        flex-direction: column; /* Cambia la dirección del flexbox a vertical */
+        align-items: center; /* Centra los elementos horizontalmente */
+    }
+
+
+    .left-side4, .right-side4 {
+        flex-basis: 100%; /* Establece el ancho al 100% para que se apilen verticalmente */
+    }
+}
+
+.slick-carousel img {
+    max-width: 50%; /* Ajusta el ancho máximo al 100% */
+    max-height: 50%; /* Ajusta el alto máximo al 100% */
+    width: auto; /* Asegura que el ancho se ajuste automáticamente */
+    height: auto; /* Asegura que el alto se ajuste automáticamente */
+    display: block; /* Hace que las imágenes se muestren como elementos en bloque */
+    margin: 0 auto; /* Centra las imágenes horizontalmente si es necesario */
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.slide {
+    position: relative; /* Permite posicionar elementos hijos relativamente a este div */
+}
+
+.overlay {
+    position: absolute; /* Posiciona el overlay de manera absoluta */
+    border-radius: 20px;
+    top: 50%;
+    left: 50%;
+    width: 30%; /* Aumenta el ancho del overlay */
+    height: 20%; /* Aumenta el alto del overlay */
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    opacity: 1; /* Mostrar siempre el overlay */
+    transition: opacity 0.3s ease; /* Transición suave para el cambio de opacidad */
+}
+
+.text {
+    color: white;
+    font-size: 1.5em;
+}
+
+@media (max-width: 768px) {
+
+    .slick-carousel img {
+        max-width: 85%; /* Ajusta el ancho máximo al 100% */
+        max-height: 85%; /* Ajusta el alto máximo al 100% */
+    }
+
+    .slick-carousel {
+        slidesToShow: 1,
+        slidesToScroll: 1
+    }
+    .overlay {
+        border-radius: 10px;
+        width: 50%; /* Ajusta el ancho del overlay para dispositivos móviles */
+        height: 20%; /* Ajusta el alto del overlay para dispositivos móviles */
+        transform: translate(-50%, 70%); /* Centra ligeramente el overlay en dispositivos móviles */
+    }
+
+    .text {
+        font-size: 0.8em; /* Ajusta el tamaño del texto dentro del overlay para dispositivos móviles */
+    }
+}
+
+/* ... Puedes continuar con más estilos específicos para cada sección si es necesario ... */
